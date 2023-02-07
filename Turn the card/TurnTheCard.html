@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drago bianco occhi blu</title>
+</head>
+<body>
+    <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="gira()" width="378px">
+    <script>
+        let carta = document.querySelector("img")
+        function gira() {
+            if (carta.src.includes ("back")) 
+                carta.src = "Drago-bianco-occhi-blu-front.jpg"
+            else carta.src = "drago-bianco-occhi-blu-back.jpg"        
+        }
+    </script>
+</body>
+</html>
