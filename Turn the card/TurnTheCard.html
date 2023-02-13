@@ -8,12 +8,19 @@
 </head>
 <body>
     <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="gira()" width="378px">
+    <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="scarta()" width="378px" class="front">
     <script>
         let carta = document.querySelector("img")
+        let front = document.querySelector(".front")
         function gira() {
             if (carta.src.includes ("back")) 
                 carta.src = "Drago-bianco-occhi-blu-front.jpg"
             else carta.src = "drago-bianco-occhi-blu-back.jpg"        
+        }
+        function scarta() {
+            if (front.src.includes ("back")) 
+                front.src = "secondo-front.jpeg"
+            else front.src = "drago-bianco-occhi-blu-back.jpg"        
         }
     </script>
 </body>
