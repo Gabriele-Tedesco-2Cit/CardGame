@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drago bianco occhi blu</title>
+    <title>Spacchettamento epico yu gi oh</title>
 </head>
 <body>
+    <!--Immagini con classi-->
     <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="gira()" width="378px">
     <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="scarta()" width="378px" class="front">
     <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="scarta1()" width="378px" class="front1">
@@ -16,7 +17,9 @@
     <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="scarta5()" width="378px" class="front5">
     <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="scarta6()" width="378px" class="front6">
     <img src="drago-bianco-occhi-blu-back.jpg" alt="" onclick="scarta7()" width="378px" class="front7">
+    
     <script>
+        // assegnazione variabili 
         let carta = document.querySelector("img")
         let front = document.querySelector(".front")
         let front1 = document.querySelector(".front1")
@@ -26,6 +29,7 @@
         let front5 = document.querySelector(".front5")
         let front6 = document.querySelector(".front6")
         let front7 = document.querySelector(".front7")
+        //funzioni
         function gira() {
             if (carta.src.includes ("back")) 
                 carta.src = "Drago-bianco-occhi-blu-front.jpg"
@@ -72,5 +76,6 @@
             else front7.src = "drago-bianco-occhi-blu-back.jpg"        
         }
     </script>
+
 </body>
 </html>
