@@ -9,52 +9,58 @@
 
     <style>
         img {
-            width: 300px;
+            width: 145px;
         }
     </style>
 </head>
 
 <body>
-    <!-- ciao -->
+    <!-- qua abbiamo un div vuoto che riempiremo di contenuto grazie al javascript -->
 
     <div id="tavoloDaGioco"></div>
 
 
     <script>
+        // array contenente tutte le immagini frontali delle carte
         carte = ["Drago-bianco-occhi-blu-front.jpg", "Drago-bianco-occhi-blu-front.jpg", "secondo-front.jpeg", "secondo-front.jpeg", "terzo-front.jpeg", "terzo-front.jpeg", "quarto-front.jpeg", "quarto-front.jpeg", "quinto-front.jpeg", "quinto-front.jpeg", "sesto-front.jpeg", "sesto-front.jpeg", "settimo-front.jpeg", "settimo-front.jpeg", "ottavo-front.jpeg", "ottavo-front.jpeg", "nono.jpeg", "nono.jpeg"]
+
+        // Variabili
         let NcarteGirate = 0;
         let primaCartaGirata = null
         tavolo = document.querySelector('#tavoloDaGioco')
 
+        //Randomizer
+        carte.sort(() => Math.random() - 0.5);
+
+        //questo pezzo di codice inserisce le carte dentro il div creato in precedenza
         carte.forEach(element => {
             tavolo.innerHTML += '<img id="' + element + '" src="drago-bianco-occhi-blu-back.jpg" onclick="gira(this)" />'
             console.log('<img id="' + element + '" src="drago-bianco-occhi-blu-back.jpg" />')
         });
 
+        //funzione che ci permette di girare le carte
         function gira(carta) {
             NcarteGirate++
             console.log(NcarteGirate)
             carta.src = carta.id
             if (NcarteGirate == 1)
                 primaCartaGirata = carta
-            else {
-                NcarteGirate = 0
-                if (carta.src == primaCartaGirata.src)
+                else {
+                 NcarteGirate = 0
+                  if (carta.src == primaCartaGirata.src)
                     console.log('Bravo +1 punto')
-                else {                
-                console.log('Riprovaci')
-                carta.src = "drago-bianco-occhi-blu-back.jpg"
-                primaCartaGirata.src = "drago-bianco-occhi-blu-back.jpg"
-            }
+                      else {                
+                      console.log('Riprovaci')
+                      //abbiamo aggiunto un tempo di un secondo prima che le due carte si rigirano 
+                      setTimeout(() => {
+                        carta.src = "drago-bianco-occhi-blu-back.jpg"
+                        primaCartaGirata.src = "drago-bianco-occhi-blu-back.jpg"
+                         }, 1000)
+                     }
 
-         }
-            /* console.log('GIRA')
-            console.log(carta.src)
-            if (carta.src.includes("back"))
-                carta.src = carta.id
-            else 
-                carta.src = "drago-bianco-occhi-blu-back.jpg" */
-        }
+                }
+
+           }
 
     </script>
 </body>
