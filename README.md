@@ -17,4 +17,5 @@ The goal is to reach 9 points and to do this you have to match all pairs, if you
 ### Functions of the game
 
 at each restart the cards are shuffled <br>
-this memory has as cards those of yu-gi-oh
+this memory has as cards those of yu-gi-oh <br>
+If you win, in the site will appear the phrase: "Bravo hai vinto!" 
